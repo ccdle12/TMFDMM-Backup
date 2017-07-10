@@ -1,0 +1,23 @@
+a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.example-container{
+     width: 500px;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/*Nav Bar*/
+nav  {
+    text-align:center;
+    /*margin-top: 50px;*/
+}
+
+nav a {
+    background-color: darkgrey;
+    color:white;
+}
+

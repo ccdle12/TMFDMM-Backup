@@ -1,0 +1,47 @@
+<div class="loading-overlay" #spinnerElement style="opacity: 10;">
+    <md-spinner></md-spinner>
+</div>
+
+
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a routerLink="/welcome" class="navbar-left" id="logo"><img src="/assets/tmforum_logo_white_on_alpha.png" height="40"/></a>
+
+          <ul id="menu">
+            <li *ngIf="this.authService.isAuthenticated()">{{this.localStorageService.getUserName()}} -</li>
+            <li *ngIf="this.authService.isAuthenticated()"> {{this.localStorageService.getUserCity()}} -</li>
+            <li *ngIf="this.authService.isAuthenticated()">{{this.localStorageService.getUserRole()}}</li>
+            <li *ngIf="inSeeDemo()">Demo User -</li>
+            <li *ngIf="inSeeDemo()"> Demo Organization -</li>
+            <li *ngIf="inSeeDemo()">Demo Role</li>
+         </ul>
+          
+        </div>      
+    
+        <img *ngIf="this.authService.isAuthenticated()" class='nav-avatar img-circle' [src]="getUserAvatar()"/>
+        <md-icon *ngIf="this.authService.isAuthenticated()"  id="menuIcon" [mdMenuTriggerFor]="menu" onMouseOver="this.style.cursor='pointer'">md_more_vert</md-icon> 
+    </nav>
+
+      <md-menu #menu="mdMenu">
+        <button md-menu-item *ngIf="authService.isAuthenticated()" (click)="editUserDetails()" id="firstMenuButton">
+          <span>View/Edit Details</span>
+        </button>
+        
+        <button md-menu-item *ngIf="authService.isAuthenticated()" (click)="this.authService.logout()">
+          <span>Log out</span>
+        </button>
+      </md-menu>
+
+  </header>
+
+<main>
+  <router-outlet>
+  </router-outlet>
+</main>
+
+<footer id="footer" ng-cloak></footer>
+
+
+
+

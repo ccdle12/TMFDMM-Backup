@@ -1,0 +1,55 @@
+.row {
+    margin-bottom: 25px;
+}
+
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.my-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+md-button-toggle {
+  text-align: center;
+}
+
+button {
+  background-color: #62B3D1;
+  color: white;
+}
+
+#navigationButton {
+  margin-right: 10px;
+}
+
+#backToDashboard {
+  margin-right: 380px;
+}
+
+.sliderTitles {
+  padding-left: 30px;
+}
+
+/*Nav Bar*/
+nav  {
+    text-align:center;
+    /*margin-top: 50px;*/
+}
+
+nav a {
+    background-color: darkgrey;
+    color:white;
+}
+
+.whiteText {
+  color: white;
+}
+
+md-slider {
+  color: pink;
+}

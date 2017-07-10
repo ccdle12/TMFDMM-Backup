@@ -1,0 +1,112 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// $mat-TMF-blue: (#62B3D1);
+
+$mat-TMF-blue: (
+  50 : #ecf6f9,
+    100 : #d0e8f1,
+    200 : #b1d9e8,
+    300 : #91cadf,
+    400 : #7abed8,
+    500 : #62b3d1,
+    600 : #5aaccc,
+    700 : #50a3c6,
+    800 : #469ac0,
+    900 : #348bb5,
+    A100 : #fdfeff,
+    A200 : #caedff,
+    A400 : #97dbff,
+    A700 : #7ed3ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-TMF-orange: (
+    50 : #fdf6e8,
+    100 : #fae8c6,
+    200 : #f7d9a1,
+    300 : #f3c97b,
+    400 : #f1be5e,
+    500 : #eeb242,
+    600 : #ecab3c,
+    700 : #e9a233,
+    800 : #e7992b,
+    900 : #e28a1d,
+    A100 : #ffffff,
+    A200 : #fff2e5,
+    A400 : #ffdab2,
+    A700 : #ffce98,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-TMF-green: (
+    50 : #f1f8eb,
+    100 : #dbeccd,
+    200 : #c4e0ac,
+    300 : #acd48a,
+    400 : #9aca71,
+    500 : #88c158,
+    600 : #80bb50,
+    700 : #75b347,
+    800 : #6bab3d,
+    900 : #589e2d,
+    A100 : #edffe2,
+    A200 : #ccffaf,
+    A400 : #abff7c,
+    A700 : #9bff63,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$my-app-primary: mat-palette($mat-TMF-orange);
+$my-app-accent:  mat-palette($mat-TMF-blue);
+$my-app-warn:    mat-palette($mat-TMF-green);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);

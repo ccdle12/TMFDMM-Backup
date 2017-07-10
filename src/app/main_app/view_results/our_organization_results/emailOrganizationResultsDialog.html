@@ -1,0 +1,10 @@
+<h3 *ngIf="this.authService.isAuthenticated()"> Email Team Results Data</h3>
+<p *ngIf="this.authService.isAuthenticated()"> This will send your team organization results data in a comma separated values (CSV) format to your email address.</p>
+<p *ngIf="this.authService.isAuthenticated()">Do you wish to Proceed? </p>
+
+<div class="row" *ngIf="this.authService.isAuthenticated()">
+    <button md-button md-dialog-close class="col-xs-6">Cancel</button>
+    <button md-button class="col-xs-6" (click)="sendSurveyRequest()">Yes</button>
+</div>
+
+<div *ngIf="!this.authService.isAuthenticated()"><strong>Demo Version - please register for full access</strong></div>

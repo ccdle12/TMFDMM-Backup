@@ -1,0 +1,50 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow:hidden;
+    margin-top: 12px;
+}
+
+li {
+    color: white;
+    display:inline-block;
+    margin-top: 12px;
+}
+
+#menu {
+    text-align:center;
+    display: inline;
+    /*margin-right: 350px;*/
+    padding-left: 50px;
+}
+
+
+/*header {*/
+    /*position: relative;*/
+/*}*/
+
+#logo {
+    padding-left: 20px;
+    margin-right: 350px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    height: 35px;
+    margin-right: 100px;
+    margin-top: 5px;
+    float: right;
+
+}
+
+#menuIcon {
+    color: white;
+    padding-top: 5px;
+    margin: 0px;
+    margin-top: 7px;
+    float: right;
+}
+
+#firstMenuButton {
+    margin-top: 37px;
+}

@@ -1,0 +1,22 @@
+<div class="topMarginForSurveyModules"></div>
+
+<nav md-tab-nav-bar>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" (click)="routeToPage('myownresults')">My Own Results</a>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" (click)="routeToPage('organizationresults')">Our Organization's Results</a>
+  <a md-tab-link [ngStyle]="inTeamDynamics()" (click)="routeToPage('teamdynamics')">Team Dynamics</a>
+</nav>
+
+<div class="container">
+                <div class="row">
+                <button md-button class="col-xs-3" (click)="backToDashboard()">Back To Dashboard</button>
+                <button md-button class="col-xs-3 col-xs-offset-6" (click)="requestSurveyCSV()" id="sendRequest">Email Results</button>
+            </div>
+</div>
+
+
+<div id="candleStickChart" class="googleComboChart container" *ngFor="let eachChart of candleChartsForDisplay, let i = index">
+  <h5><strong>{{getGraphTitles(i)}}</strong></h5>
+  <div id="candle_chart" [chartData]="candleChartsForDisplay[i]" [chartOptions] = "candle_ChartOptions" chartType="CandlestickChart" GoogleChart></div>
+</div>
+
+<div class="marginBottom"></div>

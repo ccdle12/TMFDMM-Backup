@@ -1,0 +1,17 @@
+<div class="loading-overlay" #loadingElement style="opacity: 100;">
+    <md-spinner *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+<h4>Invite a new user</h4>
+<form [formGroup]="inviteUserForm" (ngSubmit)="onSubmit()">
+    <div>
+        <md-input-container>
+            <input mdInput placeholder="Email" value="email" type="text" formControlName="email">
+            <control-messages [control]="inviteUserForm.controls.email"></control-messages>
+        </md-input-container>
+    </div>
+    <button md-button md-dialog-close>Cancel</button>
+    <button md-button (click)="inviteNewUser()" [disabled]="!inviteUserForm.valid">Send Invite</button>
+</form>
+
+

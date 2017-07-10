@@ -1,0 +1,27 @@
+<!--<div *ngIf="inTakeSurvey()" class="btn-group btn-group-justified navigationButtons">
+
+        <a *ngIf="!authService.isDemoOrMain()" routerLink="teamadmin" class="btn btn-primary">Team Admin</a>
+        <a *ngIf="!authService.isVerified()"  class="btn btn-primary">Team Admin</a>
+
+        <a routerLink="takesurvey"  class="btn btn-primary">Take Survey</a>
+        <a routerLink="viewresults" class="btn btn-primary">View Results</a>
+
+        <a *ngIf="!authService.isDemoOrMain()" routerLink="publication" class="btn btn-primary">Publish</a>
+        <a *ngIf="!authService.isVerified()"  class="btn btn-primary">Publish</a>
+
+        <a *ngIf="!authService.isDemoOrMain()" routerLink="benchmark" class="btn btn-primary">Benchmark</a>
+        <a *ngIf="!authService.isVerified()"  class="btn btn-primary">Benchmark</a>
+
+</div>-->
+
+<nav md-tab-nav-bar *ngIf="hideNavBar()">
+  <a md-tab-link [ngStyle]="inTeamAdmin()" *ngIf="!authService.inDemoMode()" routerLink="teamadmin"> Team Admin</a>
+  <a md-tab-link *ngIf="!authService.isVerified()"> Team Admin</a>
+  <a md-tab-link [ngStyle]="inSurvey()" routerLink="takesurvey"> Take Survey</a>
+  <a md-tab-link [ngStyle]="inViewResults()" routerLink="viewresults"> View Results</a>
+  <!--<a md-tab-link [ngStyle]="activeBackgroundColor()" *ngIf="!authService.inDemoMode()" routerLink="publication"> Publication</a>
+  <a md-tab-link *ngIf="!authService.isVerified()"> Publication</a>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" *ngIf="!authService.inDemoMode()" routerLink="benchmark">Benchmark</a>
+  <a md-tab-link *ngIf="!authService.isVerified()">Benchmark</a>-->
+</nav>
+<router-outlet></router-outlet>

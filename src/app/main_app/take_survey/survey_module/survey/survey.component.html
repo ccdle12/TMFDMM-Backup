@@ -1,0 +1,66 @@
+<!--<md-sidenav-container fullscreen>
+        <md-sidenav #start mode="push" style="width: 200px;" [opened]="true">
+            <div class="surveyTopMargins"></div>
+            <div class="row">
+                <md-button-toggle-group vertical class="col-xs-12" value="survey">
+                    <md-button-toggle value="survey" (click)="routeToPage('survey')"> 
+                        Survey
+                    </md-button-toggle>
+                    <md-button-toggle value="evidence" (click)="routeToPage('evidence')">
+                        Evidence
+                    </md-button-toggle>
+                    <md-button-toggle value="bestPractice" (click)="routeToPage('bestPractice')">
+                        Best Practices
+                    </md-button-toggle>
+                    <md-button-toggle value="caseStudies" (click)="routeToPage('caseStudies')">
+                        Case Studies
+                    </md-button-toggle>
+                </md-button-toggle-group>
+            </div>
+        </md-sidenav>-->
+<!--<div class="surveyTopMargins"></div>-->
+
+<!--<nav md-tab-nav-bar>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" (click)="routeToPage('survey')">Survey</a>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" (click)="routeToPage('evidence')">Evidence</a>
+  <a md-tab-link [ngStyle]="activeBackgroundColor()" (click)="routeToPage('caseStudies')">Case Studies</a>
+</nav>
+        -->
+        <div class="bodyTopMarginSurveyModules"></div>
+        <div class="container">
+            <div class="row">
+                <!--<button md-button class="col-xs-1" id="navigationButton" (click)="this.start.toggle()"> Navigation</button>-->
+                <button md-button class="col-xs-3" (click)="backToTakeSurvey()" id="backToDashboard">Back To Survey Dashboard</button>
+                <!--<button md-button class="col-xs-4 col-xs-offset-6" (click)="backToTakeSurvey()">Are you responsible for parts of this section?</button>-->
+            </div>
+            
+            <h1> {{dimensionText}}</h1>
+        
+            <div class="row">
+                <span class="col-sm-2 col-sm-offset-6 sliderTitles"><strong>IMPORTANCE</strong></span>
+                <span class="col-sm-2"><strong>AS-IS CAPABILITY</strong></span>
+                <span class="col-sm-2"><strong>2 YEAR TARGET</strong></span>
+            </div>
+
+            <div class="surveyQuestions">
+                <div class="row" *ngFor="let eachQuestion of surveyQuestions; let i = index">
+                    <span class="col-sm-6">{{surveyQuestions[i].statementID}} {{surveyQuestions[i].statementText}}</span>
+                    <span class="col-sm-1"><md-slider id="red-slider" min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="importanceValues[i]" [mdTooltip]="importanceToolTips[importanceValues[i] - 1]"></md-slider></span>
+                    <span class="col-sm-1">{{importanceValues[i]}}</span>
+                    <span class="col-sm-1"><md-slider min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="capabilityValues[i]" [mdTooltip]="capabilityToolTips[i][capabilityValues[i]]"></md-slider></span>
+                    <span class="col-sm-1">{{capabilityValues[i]}}</span>
+                    <span class="col-sm-1"><md-slider min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="twoYearTargetValues[i]" [mdTooltip]="capabilityToolTips[i][twoYearTargetValues[i]]"></md-slider></span>
+                    <span class="col-sm-1">{{twoYearTargetValues[i]}}</span>
+                </div>
+            </div>
+
+            <button md-button class="defaultBtn whiteText" (click)="saveSurveyInput()"><md-icon>save</md-icon></button>
+            <button md-button class="defaultBtn whiteText" *ngIf="notAtStartOfModules()" (click)="previousModule()"><md-icon>arrow_backward</md-icon></button>
+            <button md-button class="defaultBtn whiteText" *ngIf="notAtEndOfModules()" (click)="nextModule()"><md-icon>arrow_forward</md-icon></button>
+        </div>
+
+        <div class="topMarginForSurveyModules"></div>
+<!--</md-sidenav-container>-->
+        
+
+

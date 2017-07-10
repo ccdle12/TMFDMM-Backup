@@ -1,0 +1,35 @@
+<router-outlet></router-outlet>
+
+ <md-progress-bar *ngIf="inChildComponents()"
+          color="accent"
+          [mode]="determinate"
+          [value]="progressValue">
+      </md-progress-bar>
+
+<!--Back Up: Previous Working Code-->
+<!--<div *ngIf="inChildComponents()" class="container">
+    <div class="row" id="cardsContainer">
+    <md-card class="col-sm-1" *ngFor="let eachSurvey of takeSurveyDashboard; let i = index" (click)="navigateToSurveyModule(i)">
+        <h5>{{takeSurveyDashboard[i].dimensionText}}</h5>
+        <div class="progressBox" [ngStyle]="changeSurveyProgressBackground(i)">
+            <p>{{takeSurveyDashboard[i]?.surveyCount}} / {{takeSurveyDashboard[i]?.statementCount}}</p>
+        </div>
+    </md-card>
+    </div>
+</div>-->
+
+<div *ngIf="inChildComponents()" class="container">
+    <div class="row" *ngFor="let eachSurvey of surveyModules; let i = index">
+        <h4 class="moduleHeader">{{surveyModules[i][0]?.areaText}}</h4>
+        <div id="cardsContainer">
+        <md-card class="col-xs-2" *ngFor="let test of eachSurvey; let j = index" (click)="navigateToSurveyModule(i, j)">
+             <h6>{{surveyModules[i][j]?.dimensionText}}</h6>
+        <div class="progressBox" [ngStyle]="changeSurveyProgressBackground(i, j)">
+            <p><strong>{{surveyModules[i][j]?.surveyCount}} / {{surveyModules[i][j]?.statementCount}}</strong></p>
+        </div>
+        </md-card>
+        </div>
+    </div>
+</div>
+
+<!--<div class="marginBottomMainApp"></div>-->

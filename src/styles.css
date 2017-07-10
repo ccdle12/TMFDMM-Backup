@@ -1,0 +1,118 @@
+/*@import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
+/*@import '~@angular/material/theming';*/
+/*@import '~@angular/material/core/theming/all-theme';*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+/* You can add global styles to this file, and also import other style files */
+
+/*@import './custom-theme.scss';*/
+
+html {
+  height: 100%;
+  /*box-sizing: border-box;*/
+  font-family: 'Libre Franklin';
+  /* make sure the body does not have a margin */
+    /*margin: 0;*/
+    /*padding-bottom: 500px;*/
+}
+
+body {
+  /*height: 100%;*/
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 8rem;
+    /*display: flex;*/
+  /*flex-direction: column;*/
+  /*margin: 0 0 100px;  bottom = footer height */
+}
+
+
+h1 {
+  color: black;
+  font-size: 250%;
+}
+
+
+.loading-overlay {
+  position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+.topMargin {
+  margin-top: 100px;
+}
+
+.googleComboChart {
+    margin-bottom: 10px;
+}
+
+.topMarginForSurveyModules {
+    margin-top: 50px;
+}
+
+.bodyTopMarginSurveyModules {
+  margin-top: 25px;
+}
+
+.defaultBtn {
+  background-color: #62B3D1;
+  color: white;
+}
+
+
+.btn {
+  color: white;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    background-color: #88C158;
+}
+
+.orangeBtn {
+  background-color: #EEB242;
+}
+
+#footer {
+    /*margin-top: 100px;*/
+    /*clear: both;*/
+    /*position: relative;*/
+    /*z-index: 10;*/
+    /*height: 3em;*/
+    /*margin-top: -3em;*/
+    background-color: #88C158;
+    /*margin-top: 100px;*/
+    /*padding-top: 100px*/
+    /*height: 271px;*/
+    /*position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;*/
+  height: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*padding: 1rem;*/
+  /*background-color: #efefef;*/
+  text-align: center;
+}
+
+.marginBottom {
+  margin-bottom: 50px;
+}
+
+.marginBottomMainApp {
+    margin-bottom: 600px;
+}

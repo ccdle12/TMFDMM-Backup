@@ -1,0 +1,18 @@
+<div class="loading-overlay" #loadingElement style="opacity: 100;">
+    <md-spinner *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+<div class="form">
+    <md-input-container>
+        <input mdInput placeholder="Name" [(ngModel)]="userName" value={{userName}}>
+    </md-input-container>
+</div>
+
+<div class="form">
+    <md-input-container>
+        <input mdInput placeholder="Job Title" [(ngModel)]="userTitle" value="{{userTitle}}">
+    </md-input-container>
+</div>
+
+<button md-button md-dialog-close>Cancel</button>
+<button md-button (click)="updateUserDetails()">Save</button>

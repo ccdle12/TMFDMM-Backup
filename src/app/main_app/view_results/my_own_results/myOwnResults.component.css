@@ -1,0 +1,28 @@
+/*Nav Bar*/
+nav  {
+    text-align:center;
+    /*margin-top: 50px;*/
+}
+
+/*nav a {
+    background-color: darkgrey;
+    color:white;
+}*/
+
+/*button {
+  background: #1e90ff;
+  color: white;
+}*/
+
+.whiteText {
+    color:white;
+}
+
+#sendRequest {
+    float: right;
+}
+
+button {
+  background-color: #62B3D1;
+  color: white;
+}

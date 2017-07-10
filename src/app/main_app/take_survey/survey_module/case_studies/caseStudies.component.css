@@ -1,0 +1,43 @@
+.row {
+    margin-bottom: 25px;
+}
+
+md-card {
+    height: 200px;
+    width: 250px;
+    margin: 0 0 25px 10px;
+    position:relative;
+}
+
+md-card:hover {
+    cursor: pointer;
+}
+
+md-button-toggle {
+  text-align: center;
+}
+
+button {
+  background-color: #62B3D1;
+  color: white;
+}
+#navigationButton {
+  margin-right: 10px;
+}
+
+#backToDashboard {
+  margin-right: 270px;
+}
+
+.sliderTitles {
+  padding-left: 30px;
+}
+
+#cardsContainer {
+    margin-top: 50px;
+    text-align: center;
+    padding-left: 100px;
+}
+
+
+

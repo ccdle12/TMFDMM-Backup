@@ -1,0 +1,33 @@
+<div class="container">
+        <div class="row">
+            <!--<button md-button class="col-xs-3">Add New User</button>-->
+            <button md-mini-fab class="col-xs-3" color="primary" (click)="addNewUser()"><md-icon>add</md-icon></button>
+        </div>
+    <div class="row"  id="cardsContainer">
+     <md-card class="col-sm-1" *ngFor="let userProfile of userProfiles; let i = index">
+        <img class="roundImage reduceImageSize" [src]="userProfile.picture"/>
+        
+        <div class="cardBody">
+            <h5><strong>{{getUsersName(i)}}</strong></h5>
+            <h6>{{userProfile.app_metadata.user_role}}</h6>
+            
+
+            <!--<img id="centerImage" md-card-md-image class="thumbnail" [src]="userProfile.picture"/>-->
+            
+            <md-card-content>
+                <h6>{{getUsersTitle(i)}}</h6>
+                <h6>{{userProfile.email}}</h6>
+            </md-card-content>
+        </div>
+        <!--<md-card-actions>
+            <button md-button>EDIT</button>
+            <button md-button>DELETE</button>
+        </md-card-actions>-->
+     </md-card>
+    </div>
+</div>
+
+<!--<div class="marginBottomTeamAdmin"></div>-->
+
+
+

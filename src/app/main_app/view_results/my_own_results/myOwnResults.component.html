@@ -1,0 +1,20 @@
+<div class="topMarginForSurveyModules"></div>
+<nav md-tab-nav-bar>
+  <a md-tab-link class="defaultBtn whiteText" [ngStyle]="inMyOwnResults()" (click)="routeToPage('myownresults')">My Own Results</a>
+  <a md-tab-link class="defaultBtn whiteText" [ngStyle]="activeBackgroundColor()" (click)="routeToPage('organizationresults')">Our Organization's Results</a>
+  <a md-tab-link class="defaultBtn whiteText" [ngStyle]="activeBackgroundColor()" (click)="routeToPage('teamdynamics')">Team Dynamics</a>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <button md-button class="col-xs-3" (click)="backToDashboard()">Back To Dashboard</button>
+    <button md-button class="col-xs-3 col-xs-offset-6" (click)="requestSurveyCSV()" id="sendRequest">Email Results</button>
+  </div>
+</div>
+
+
+<div class="googleComboChart" *ngFor="let eachChart of comboCharts, let i = index">
+  <google-chart [data]="comboCharts[i]"></google-chart>
+</div>
+
+<div class="marginBottom"></div>

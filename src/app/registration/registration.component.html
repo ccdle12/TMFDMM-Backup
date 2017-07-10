@@ -1,0 +1,50 @@
+<div class="topMargin"></div>
+<div class="container">
+    <div class="row">
+        <h2>Registration</h2>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <div class="form-group" class="col-sm-6">
+                    <label>Name</label>
+                    <input value="Name" type="text" class="form-control" formControlName="name">
+                    <!--<control-messages [control]="registrationForm.controls.name"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-6">
+                    <label>Job Title</label>
+                    <input type="text" class="form-control" formControlName="jobTitle">
+                    <!--<control-messages [control]="registrationForm.controls.jobTitle"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-6">
+                    <label>Organization</label>
+                    <input type="text" class="form-control" formControlName="organization">
+                    <!--<control-messages [control]="registrationForm.controls.organization"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-6">
+                    <label>Country</label>
+                    <input type="text" class="form-control" formControlName="country">
+                    <!--<control-messages [control]="registrationForm.controls.country"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-6">
+                    <label>Email</label>
+                    <input type="text" class="form-control" formControlName="email" id="email">
+                    <!--<control-messages [control]="registrationForm.controls.email"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-6">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" formControlName="phone">
+                    <!--<control-messages [control]="registrationForm.controls.phone"></control-messages>-->
+                </div>
+
+                <div class="form-group" class="col-sm-12">
+                    <label>User Detail</label>
+                    <input type="text" class="form-control" formControlName="userDetail">
+                </div>
+
+                <button id="submitButton" type="submit" class="btn btn-primary col-sm-12" [disabled]="!registrationForm.valid">Submit</button>
+            </form>
+        </div>
+</div>
